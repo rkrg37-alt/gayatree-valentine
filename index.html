@@ -181,6 +181,28 @@
             questionSection.classList.add('hidden');
             successSection.classList.remove('hidden');
         });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️'; // This is the heart symbol
+            
+            // This part puts the heart at a random spot along the bottom
+            heart.style.left = Math.random() * 100 + 'vw';
+            
+            // This part makes some hearts move a little faster or slower
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            
+            document.body.appendChild(heart);
+            
+            // This part cleans up and removes the heart after it floats away
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // This tells the computer: "Create a heart every 500 milliseconds (half a second)"
+        setInterval(createHeart, 500);
     </script>
 </body>
 </html>
