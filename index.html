@@ -62,7 +62,7 @@
         }
 
         #yesBtn {
-            background-color: #ff4d6d;
+            -color: #ff4d6d;
             color: white;
             box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
             z-index: 10; /* Keeps Yes on top */
@@ -72,6 +72,7 @@
             background-color: #e5e7eb;
             color: #333;
             position: absolute; /* Allows movement */
+            z-index: 100; /* Keeps No on the very top layer! */
         }
 
         .subtext {
